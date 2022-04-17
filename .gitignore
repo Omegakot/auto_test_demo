@@ -2,4 +2,4 @@ chromedriver.exe
 requirements.txt
 /__pycache__
 /.pytest_cache
-
+basic_code.py

@@ -7,13 +7,13 @@ def pytest_addoption(parser):
     parser.addoption('--language', action='store', default='ru',
                      help="Choose language")
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='session')
 def browser(request):
     language = request.config.getoption('language')
-    browser = webdriver.Chrome()
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': language})
     browser = webdriver.Chrome(options=options)
+    print("запуск драйвера")
     yield browser
-    time.sleep(10)
+    time.sleep(2)
     browser.quit()
