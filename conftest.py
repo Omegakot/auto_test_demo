@@ -15,5 +15,5 @@ def browser(request):
     browser = webdriver.Chrome(options=options)
     print("запуск драйвера")
     yield browser
-    time.sleep(2)
+    time.sleep(10)
     browser.quit()
