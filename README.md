@@ -1,2 +1,2 @@
-# auto_testing
+# auto_testing_demo
 
